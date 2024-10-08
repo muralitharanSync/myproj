@@ -1,0 +1,21 @@
+from django.shortcuts import redirect, render
+from django.http import HttpResponse
+from django.contrib.auth import logout
+
+# Create your views here.
+
+def index(request):
+    return render(request, 'index.html')
+
+def signup(request):
+    return render(request, 'signup.html')
+
+
+def signin(request):
+    return render(request, 'signin.html')
+
+
+def signout(request):
+    # log the user out
+    logout(request)
+    return redirect('index')  #Redirect to the index page after logout 
