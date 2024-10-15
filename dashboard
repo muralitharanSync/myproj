@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .welcome-msg {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logout-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Your Dashboard</h1>
+        <p class="welcome-msg">Hello, {{ user.username }}! This is your dashboard.</p>
+        <a href="{% url 'signin' %}" class="logout-btn">Logout</a>
+    </div>
+
+</body>
+</html>
+
